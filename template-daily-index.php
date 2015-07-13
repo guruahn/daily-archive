@@ -66,7 +66,7 @@ if(empty($daily_year) || empty($daily_month) || empty($daily_day) ){
 
             <?php if ( $blog_posts->have_posts() ) : ?>
                 <header class="page-header">
-                    <h1 class="page-title">날짜: <?php echo $arr_date['year'];?> <?php echo $arr_date['month'];?> <?php echo $arr_date['day'];?></h1>
+                    <h1 class="page-title"><?php echo date(get_option('date_format'), strtotime($arr_date['year'].'-'.$arr_date['month'].'-'.$arr_date['day']));?></h1>
                 </header>
 
                 <?php

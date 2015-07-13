@@ -27,6 +27,13 @@ function daily_page_template( $page_template )
     return $page_template;
 }
 
+function daily_init(){
+    load_plugin_textdomain( 'daily-archive', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+
+    daily_add_page();
+
+}
+
 function daily_add_page(){
 
     $the_page_title = 'Daily index';
@@ -45,7 +52,7 @@ function daily_add_page(){
         $_p['comment_status'] = 'closed';
         $_p['ping_status'] = get_option('default_ping_status');
         $_p['post_category'] = array(1); // the default 'Uncatrgorised'
-        $_p['page_template'] = 'Daily Page Template';
+        //$_p['page_template'] = 'Daily Page Template';
 
         // Insert the post into the database
         $the_page_id = wp_insert_post( $_p );
@@ -67,19 +74,19 @@ function daily_print_daily_arrow($arr_date){
     ?>
 
     <nav class="navigation post-navigation" role="navigation">
-        <h2 class="screen-reader-text">글 내비게이션</h2>
+        <h2 class="screen-reader-text">_e('Daily Navigation', 'daily-archive')</h2>
         <div class="nav-links">
             <div class="nav-previous">
-                <a href="<?php echo $url_prev; ?>" rel="prev"><span class="meta-nav" aria-hidden="true">이전</span> <span class="screen-reader-text">전 날:</span> <span class="post-title"><?php echo $prev_daily['year'].'/'.$prev_daily['month'].'/'.$prev_daily['day'];?></span>
+                <a href="<?php echo $url_prev; ?>" rel="prev"><span class="meta-nav" aria-hidden="true"><?php _e('Previous day', 'daily-archive'); ?></span> <span class="screen-reader-text"><?php _e('Previous day', 'daily-archive') ?>:</span> <span class="post-title"><?php echo date(get_option('date_format'), strtotime($prev_daily['year'].'/'.$prev_daily['month'].'/'.$prev_daily['day']));?></span>
                 </a>
             </div>
             <?php
             if( $next_daily != date_parse(date('Y/m/d', strtotime('+1 day', strtotime(date('Y/m/d'))))) ){;
-            ?>
-            <div class="nav-next">
-                <a href="<?php echo $url_next; ?>" rel="next"><span class="meta-nav" aria-hidden="true">다음</span> <span class="screen-reader-text">다음 날:</span> <span class="post-title"><?php echo $next_daily['year'].'/'.$next_daily['month'].'/'.$next_daily['day'];?></span>
-                </a>
-            </div>
+                ?>
+                <div class="nav-next">
+                    <a href="<?php echo $url_next; ?>" rel="next"><span class="meta-nav" aria-hidden="true"><?php _e('Next day', 'daily-archive') ?></span> <span class="screen-reader-text"><?php _e('Next day', 'daily-archive') ?>:</span> <span class="post-title"><?php echo date(get_option('date_format'), strtotime($next_daily['year'].'/'.$next_daily['month'].'/'.$next_daily['day']));?></span>
+                    </a>
+                </div>
             <?php }?>
         </div>
     </nav>
@@ -90,6 +97,14 @@ function daily_404($template_404){
     $template_404 = plugin_dir_path( __FILE__ ) . '/daily-not-found.php';
     return $template_404;
 }
+
+function daily_archive_title($title=null){
+
+    $title = date(get_option('date_format'), strtotime(get_query_var('year').'-'.get_query_var('monthnum').'-'.get_query_var('day')));
+
+    return $title;
+}
+
 
 function daily_custom_archive_page($args){
 
@@ -108,6 +123,7 @@ function daily_custom_archive_page($args){
         );
         set_query_var( 'date_query', $date_query );
         add_action('loop_end','daily_print_daily_arrow');
+        add_filter('get_the_archive_title', 'daily_archive_title');
         if($args->post_count == 0) add_filter('404_template','daily_404');
     }
 }
