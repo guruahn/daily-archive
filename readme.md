@@ -32,11 +32,9 @@ This plug-in provides a daily archive.
 ## Changelog ==
 
 
-### Upgrade Notice ==
-
-= 1.2 =
+### 1.2
 
 - multi-lang system. 다국어지원을 위한 시스템 구축
 - add eng/kor. 영어/한국어 추가
 
-= 1.2 =
+### 1.0
