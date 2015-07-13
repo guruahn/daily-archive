@@ -45,7 +45,7 @@ function daily_add_page(){
         $_p['comment_status'] = 'closed';
         $_p['ping_status'] = get_option('default_ping_status');
         $_p['post_category'] = array(1); // the default 'Uncatrgorised'
-        $_p['page_template'] = 'Daily Page Template';
+        //$_p['page_template'] = 'Daily Page Template';
 
         // Insert the post into the database
         $the_page_id = wp_insert_post( $_p );
@@ -91,6 +91,14 @@ function daily_404($template_404){
     return $template_404;
 }
 
+function daily_archive_title($title=null){
+
+    $title = date(get_option('date_format'), strtotime(get_query_var('year').'-'.get_query_var('monthnum').'-'.get_query_var('day')));
+
+    return $title;
+}
+
+
 function daily_custom_archive_page($args){
 
     $is_daily = false;
@@ -108,6 +116,7 @@ function daily_custom_archive_page($args){
         );
         set_query_var( 'date_query', $date_query );
         add_action('loop_end','daily_print_daily_arrow');
+        add_filter('get_the_archive_title', 'daily_archive_title');
         if($args->post_count == 0) add_filter('404_template','daily_404');
     }
 }

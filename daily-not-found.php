@@ -17,7 +17,7 @@ $arr_date = date_parse(get_query_var( 'year', '' ).'-'.get_query_var( 'monthnum'
         <main id="main" class="site-main" role="main">
 
             <header class="page-header">
-                <h1 class="page-title">Nothing Found</h1>
+                <h1 class="page-title"><?php echo daily_archive_title(null); ?></h1>
 
             </header>
             <article id="post-4" class="post-4 post type-post status-publish format-standard hentry category-uncategorized">
