@@ -29,10 +29,14 @@ This plug-in provides a daily archive.
 1. Change the template on this page to the 'Daily Page Template'. 이 페이지의 템플릿을 'Daily Page Template'으로 설정하십시요.
 1. If you want, change index page to the 'daily-index' page.(Dashboard>Setting>reading) 원한다면 이 페이지를 첫 화면으로 바꾸실 수 있습니다.(관리자>설정>읽기)
 
-== Changelog ==
+## Changelog ==
 
 
-== Upgrade Notice ==
+### Upgrade Notice ==
 
 = 1.2 =
 
+- multi-lang system. 다국어지원을 위한 시스템 구축
+- add eng/kor. 영어/한국어 추가
+
+= 1.2 =
