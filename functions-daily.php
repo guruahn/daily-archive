@@ -30,8 +30,6 @@ function daily_page_template( $page_template )
 function daily_init(){
     load_plugin_textdomain( 'daily-archive', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 
-    daily_add_page();
-
 }
 
 function daily_add_page(){
@@ -39,9 +37,8 @@ function daily_add_page(){
     $the_page_title = 'Daily index';
     $the_page_name = 'daily-index';
 
-    $the_page = get_page_by_title( $the_page_title );
-
-    if ( ! $the_page ) {
+    $page = get_page_by_path($the_page_name);
+    if ( !$page ) {
 
         // Create post object
         $_p = array();

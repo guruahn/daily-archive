@@ -31,6 +31,7 @@ require_once(plugin_dir_path( __FILE__ )."page-templater-class.php");
 /*init*/
 add_action( 'plugins_loaded', array( 'PageTemplater', 'get_instance' ) );
 add_action( 'plugins_loaded', 'daily_init' );
+add_action( 'wp_loaded', 'daily_add_page' );
 //add_filter( 'single_template', 'daily_page_template', 99 );
 
 
