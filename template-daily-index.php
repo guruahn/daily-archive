@@ -38,7 +38,7 @@ if(empty($daily_year) || empty($daily_month) || empty($daily_day) ){
                 'day'   => $arr_date['day'],
             ),
         );
-        $blog_posts = new WP_Query( apply_filters(  'wmhook_template_front_query_args_blog', $query ) );
+        $blog_posts = new WP_Query( $query );
 
         if(!$blog_posts->have_posts()){
             $add -= 1;

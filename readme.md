@@ -1,14 +1,13 @@
-#Daily Archive
+# Daily Archive
 
-## Plugin Name
-Contributors: guruahn
-Donate link: http://gongjam.co.kr/
-Tags: archive, daily
-Requires at least: 4.2.2
-Tested up to: 4.4.4
-Stable tag: 1.2
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+- Contributors: guruahn
+- Donate link: http://gongjam.co.kr/
+- Tags: archive, daily
+- Requires at least: 4.2.2
+- Tested up to: 4.4.2
+- Stable tag: 1.4
+- License: GPLv2 or later
+- License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This plug-in provides a daily archive.
 
@@ -29,8 +28,16 @@ This plug-in provides a daily archive.
 1. Change the template on this page to the 'Daily Page Template'. 이 페이지의 템플릿을 'Daily Page Template'으로 설정하십시요.
 1. If you want, change index page to the 'daily-index' page.(Dashboard>Setting>reading) 원한다면 이 페이지를 첫 화면으로 바꾸실 수 있습니다.(관리자>설정>읽기)
 
+## ScreenShot
+
+![This screen shot description daily-index page.](http://guruahn.cafe24.com/wp/daily-archive/wp-content/uploads/sites/2/2015/07/screenshot-1.png)
+
 ## Changelog ==
 
+### 1.4
+
+- Delete does not use filters. 사용하지 않는 필터 삭제.
+- update readme.txt
 
 ### 1.2
 
