@@ -4,7 +4,7 @@ Donate link: http://gongjam.co.kr/
 Tags: archive, daily
 Requires at least: 4.2.2
 Tested up to: 4.4.2
-Stable tag: 1.4
+Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,16 +32,12 @@ This plug-in provides a daily archive.
 
 == Changelog ==
 
-= 1.4 =
+= 1.0 =
 * Delete does not use filters. 사용하지 않는 필터 삭제.
 * update readme.txt
-
-= 1.2 =
-
 * multi-lang system. 다국어지원을 위한 시스템 구축
 * add eng/kor. 영어/한국어 추가
 
-= 1.0 =
 
 == Upgrade Notice ==
 

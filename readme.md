@@ -34,14 +34,9 @@ This plug-in provides a daily archive.
 
 ## Changelog ==
 
-### 1.4
+### 1.0
 
 - Delete does not use filters. 사용하지 않는 필터 삭제.
 - update readme.txt
-
-### 1.2
-
 - multi-lang system. 다국어지원을 위한 시스템 구축
 - add eng/kor. 영어/한국어 추가
-
-### 1.0
