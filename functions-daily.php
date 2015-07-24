@@ -71,17 +71,16 @@ function daily_print_daily_arrow($arr_date){
     ?>
 
     <nav class="navigation post-navigation" role="navigation">
-        <h2 class="screen-reader-text">_e('Daily Navigation', 'daily-archive')</h2>
         <div class="nav-links">
             <div class="nav-previous">
-                <a href="<?php echo $url_prev; ?>" rel="prev"><span class="meta-nav" aria-hidden="true"><?php _e('Previous day', 'daily-archive'); ?></span> <span class="screen-reader-text"><?php _e('Previous day', 'daily-archive') ?>:</span> <span class="post-title"><?php echo date(get_option('date_format'), strtotime($prev_daily['year'].'/'.$prev_daily['month'].'/'.$prev_daily['day']));?></span>
+                <a href="<?php echo $url_prev; ?>" rel="prev"><span class="meta-nav" aria-hidden="true"><?php _e('Previous day', 'daily-archive'); ?></span> <span class="post-title"><?php echo date(get_option('date_format'), strtotime($prev_daily['year'].'/'.$prev_daily['month'].'/'.$prev_daily['day']));?></span>
                 </a>
             </div>
             <?php
             if( $next_daily != date_parse(date('Y/m/d', strtotime('+1 day', strtotime(date('Y/m/d'))))) ){;
                 ?>
                 <div class="nav-next">
-                    <a href="<?php echo $url_next; ?>" rel="next"><span class="meta-nav" aria-hidden="true"><?php _e('Next day', 'daily-archive') ?></span> <span class="screen-reader-text"><?php _e('Next day', 'daily-archive') ?>:</span> <span class="post-title"><?php echo date(get_option('date_format'), strtotime($next_daily['year'].'/'.$next_daily['month'].'/'.$next_daily['day']));?></span>
+                    <a href="<?php echo $url_next; ?>" rel="next"><span class="meta-nav" aria-hidden="true"><?php _e('Next day', 'daily-archive') ?></span> <span class="post-title"><?php echo date(get_option('date_format'), strtotime($next_daily['year'].'/'.$next_daily['month'].'/'.$next_daily['day']));?></span>
                     </a>
                 </div>
             <?php }?>
