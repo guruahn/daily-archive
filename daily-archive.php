@@ -3,7 +3,7 @@
 Plugin Name: Daily Archive
 Plugin URI: http://gongjam.co.kr
 Description: your archive change to daily format.
-Version: 1.0
+Version: 1.1
 Author: gongjam
 Author URI: http://gongjam.co.kr
 License: GPL2

@@ -4,7 +4,7 @@ Donate link: http://gongjam.co.kr/
 Tags: archive, daily
 Requires at least: 4.2.2
 Tested up to: 4.4.2
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,6 +31,9 @@ This plug-in provides a daily archive.
 
 
 == Changelog ==
+
+= 1.1 =
+* remove screen-reader-text.
 
 = 1.0 =
 * Delete does not use filters. 사용하지 않는 필터 삭제.

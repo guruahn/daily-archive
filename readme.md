@@ -5,7 +5,7 @@
 - Tags: archive, daily
 - Requires at least: 4.2.2
 - Tested up to: 4.4.2
-- Stable tag: 1.4
+- Stable tag: 1.1
 - License: GPLv2 or later
 - License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,10 @@ This plug-in provides a daily archive.
 ![This screen shot description daily-index page.](http://guruahn.cafe24.com/wp/daily-archive/wp-content/uploads/sites/2/2015/07/screenshot-1.png)
 
 ## Changelog ==
+
+### 1.1
+
+- remove screen-reader-text.
 
 ### 1.0
 
